@@ -11,7 +11,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ApplyComponent } from './components/apply/apply.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
-
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
@@ -27,6 +26,22 @@ import { ArticlepageComponent } from './components/articlelist/articlepage/artic
 import { EditComponent } from './admin/adminpage/accounts/edit/edit.component';
 import { ContentlistComponent } from './admin/adminpage/content/contentlist/contentlist.component';
 import { ContenteditComponent } from './admin/adminpage/content/contentedit/contentedit.component';
+import { TeamlistComponent } from './admin/adminpage/teams/teamlist/teamlist.component';
+import { TeamaddComponent } from './admin/adminpage/teams/teamadd/teamadd.component';
+import { TeamupdateComponent } from './admin/adminpage/teams/teamupdate/teamupdate.component';
+import { AddComponent } from './admin/adminpage/accounts/add/add.component';
+import { AccountlistComponent } from './admin/adminpage/accounts/accountlist/accountlist.component';
+import { ContentaddComponent } from './admin/adminpage/content/contentadd/contentadd.component';
+import {
+  MatDialogModule,
+  MAT_DIALOG_DEFAULT_OPTIONS,
+} from '@angular/material/dialog';
+import { ModalComponent } from './modals/modal/modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { ApplypageComponent } from './apply/applypage/applypage.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,9 +68,30 @@ import { ContenteditComponent } from './admin/adminpage/content/contentedit/cont
     EditComponent,
     ContentlistComponent,
     ContenteditComponent,
+    TeamlistComponent,
+    TeamaddComponent,
+    TeamupdateComponent,
+    AddComponent,
+    AccountlistComponent,
+    ContentaddComponent,
+    ModalComponent,
+    ApplypageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, MatSliderModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    MatSliderModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    HttpClientModule,
+    FormsModule,
+  ],
+  providers: [
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
+  ],
   bootstrap: [AppComponent],
+  entryComponents: [ModalComponent, ContentlistComponent],
 })
 export class AppModule {}

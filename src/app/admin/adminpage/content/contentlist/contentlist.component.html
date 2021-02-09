@@ -21,9 +21,6 @@
                         <th>
                           City
                         </th>
-                        <th>
-                          Salary
-                        </th>
                       </thead>
                       <tbody>
                         <tr>
@@ -39,9 +36,14 @@
                           <td>
                             Oud-Turnhout
                           </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
+                           <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="" (click)="openDialog()" class="btn btn-danger btn-link btn-sm" data-original-title="Edit Task">
+                                <i class="material-icons">close</i>
+                              <div class="ripple-container"></div></button>
+                            </td>
                         </tr>
                         <tr>
                           <td>
@@ -56,9 +58,15 @@
                           <td>
                             Sinaai-Waas
                           </td>
-                          <td class="text-primary">
-                            $23,789
-                          </td>
+                           <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="" (click)="openDialog()" class="btn btn-danger btn-link btn-sm" data-original-title="Edit Task">
+                                <i class="material-icons">close</i>
+                              <div class="ripple-container"></div></button>
+                            </td>
+
                         </tr>
                         <tr>
                           <td>
@@ -73,9 +81,14 @@
                           <td>
                             Baileux
                           </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
+                             <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="" (click)="openDialog()" class="btn btn-danger btn-link btn-sm" data-original-title="Edit Task">
+                                <i class="material-icons">close</i>
+                              <div class="ripple-container"></div></button>
+                            </td>
                         </tr>
                         <tr>
                           <td>
@@ -90,9 +103,16 @@
                           <td>
                             Overland Park
                           </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
+
+                          <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" (click)="openDialog()" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Edit Task">
+                                <i class="material-icons">close</i>
+                              <div class="ripple-container"></div></button>
+                            </td>
+
                         </tr>
                         <tr>
                           <td>
@@ -107,9 +127,14 @@
                           <td>
                             Feldkirchen in Kärnten
                           </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" (click)="openDialog()" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Edit Task">
+                                <i class="material-icons">close</i>
+                              <div class="ripple-container"></div></button>
+                            </td>
                         </tr>
                         <tr>
                           <td>
@@ -124,16 +149,21 @@
                           <td>
                             Gloucester
                           </td>
-                          <td class="text-primary">
-                            $78,615
-                          </td>
+
+                             <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" (click)="openDialog()" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Edit Task">
+                                <i class="material-icons">close</i>
+                              <div class="ripple-container"></div></button>
+                            </td>
                         </tr>
                       </tbody>
                     </table>
+                    <a href="javascript:;" class="btn btn-primary btn-round" routerLink="./add">Add Content</a>
                   </div>
                 </div>
               </div>
             </div>
-
-
             </div>

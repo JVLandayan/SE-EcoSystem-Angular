@@ -3,13 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-apply',
   templateUrl: './apply.component.html',
-  styleUrls: ['./apply.component.css']
+  styleUrls: ['./apply.component.css'],
 })
 export class ApplyComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  applyPage() {
+    window.location.href = './applytemplate/apply.html';
   }
-
 }

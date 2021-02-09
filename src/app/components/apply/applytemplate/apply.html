@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v1 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/bg-registration-form-1.jpg');">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="images/registration-form-1.jpg" alt="">
+				</div>
+			<form autocomplete="off" method="POST" name="google-sheet" >
+					<h3 style="color: black;">Registration Form</h3>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Last Name" name="LastName" class="form-control">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+          					<div class="form-wrapper">
+						<input type="text" placeholder="First Name" name="FirstName" class="form-control">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+          					<div class="form-wrapper">
+						<input type="text" placeholder="Middle Name" name="MiddleName" class="form-control">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+          					<div class="form-wrapper">
+						<input type="number" placeholder="Student Number" name="StudentNumber" class="form-control">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="email" placeholder="UST Email" name="USTEmail"  class="form-control">
+						<i class="zmdi zmdi-email"></i>
+					</div>
+					<div class="form-wrapper">
+						<select name="Role" id="" class="form-control">
+							<option value="" disabled selected>Role</option>
+							<option value="male">Male</option>
+							<option value="femal">Female</option>
+							<option value="other">Other</option>
+						</select>
+						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+					</div>
+					<button type="submit">Submit
+					</button>
+				</form>
+			</div>
+		</div>
+
+                  <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbw88N89TdUE42-fi6Wd0WTKxFz-nyVWG9AtOXTlS8VQMZbB3Bmt/exec'
+            const form = document.forms['google-sheet']
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Application has been sent!"))
+                .then(data => console.log(data))
+                .catch(error => console.error('Error!', error.message))
+            })
+
+          </script>
+
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
