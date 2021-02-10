@@ -18,6 +18,7 @@ import { TeamupdateComponent } from './admin/adminpage/teams/teamupdate/teamupda
 import { ApplypageComponent } from './apply/applypage/applypage.component';
 import { ArticlelistComponent } from './components/articlelist/articlelist.component';
 import { ArticlepageComponent } from './components/articlelist/articlepage/articlepage.component';
+import { ArticlesmultipleComponent } from './components/articlelist/articlesmultiple/articlesmultiple.component';
 import { LandingComponent } from './components/landing/landing.component';
 
 import { LoginpageComponent } from './loginpage/loginpage.component';
@@ -27,13 +28,17 @@ const routes: Routes = [
   { path: 'login', component: LoginpageComponent },
   { path: 'apply', component: ApplypageComponent },
   {
+    path: 'articles',
+    component: ArticlelistComponent, children: [
+      {  path: 'page/:id', component: ArticlesmultipleComponent
+      }
+    ]
+  },
+  {
     path: 'articles/:id',
     component: ArticlepageComponent,
   },
-  {
-    path: 'articles',
-    component: ArticlelistComponent,
-  },
+
   {
     path: 'authpanel',
     component: AdminpageComponent,

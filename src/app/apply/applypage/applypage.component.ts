@@ -1,8 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Renderer2, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-applypage',
@@ -19,9 +16,10 @@ export class ApplypageComponent implements OnInit {
     this.renderer.appendChild(document.body, script);
     return script;
   }
+  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.addJsToElement(
-      'https://drive.google.com/uc?export=view&id=1bOE-f9grJiGtiTqv2uL08_ERqwsrYFmm'
+      '../../../assets/js/index.js'
     ).onload = (teste) => {
       console.log(teste);
       console.log();

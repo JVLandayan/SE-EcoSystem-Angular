@@ -42,6 +42,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { ApplypageComponent } from './apply/applypage/applypage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ArticlesmultipleComponent } from './components/articlelist/articlesmultiple/articlesmultiple.component';
+import { DatePipe } from '@angular/common';
+import { ArticlesPipe } from './pipes/articles.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+import {CKEditorModule} from '@ckeditor/ckeditor5-angular'
 
 @NgModule({
   declarations: [
@@ -76,6 +81,8 @@ import { FormsModule } from '@angular/forms';
     ContentaddComponent,
     ModalComponent,
     ApplypageComponent,
+    ArticlesmultipleComponent,
+    ArticlesPipe,
   ],
   imports: [
     BrowserModule,
@@ -86,10 +93,12 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule, NgxPaginationModule,
+    CKEditorModule
   ],
   providers: [
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
+    DatePipe
   ],
   bootstrap: [AppComponent],
   entryComponents: [ModalComponent, ContentlistComponent],

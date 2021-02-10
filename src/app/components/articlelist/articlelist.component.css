@@ -11053,12 +11053,12 @@ h6 {
 }
 
 .blog-list .item .post-thumb {
-  max-width: 110px;
+  max-width: 200px;
   border-radius: 2px
 }
 
 .blog-list .item .intro {
-  font-size: 0.875rem
+  font-size: 0.875rem; color: black;
 }
 
 .blog-list .item .more-link {
@@ -11419,4 +11419,9 @@ body {
   color: #6c757d !important
 }
 
-
+.pagination /deep/ .ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: #ffc107;
+  color: white;
+  cursor: default;
+}

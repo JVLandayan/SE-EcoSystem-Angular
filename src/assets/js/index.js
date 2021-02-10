@@ -6,6 +6,5 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbw88N89TdUE42-fi6Wd0W
               fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => alert("Submission was received", response))
                 .catch(error => console.error('Error!', error.message))
-              .finally(window.history.back())
             })
             console.log(FormData)

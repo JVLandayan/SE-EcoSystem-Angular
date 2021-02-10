@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer:Renderer2) { }
 
-  ngOnInit(): void {
+
+  addJsToElement(src: string): HTMLScriptElement {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = src;
+    this.renderer.appendChild(document.body, script);
+    return script;
+  }
+  // tslint:disable-next-line: typedef
+  ngOnInit() {
+    this.addJsToElement(
+      '../../../assets/js/script.js'
+    ).onload = (teste) => {
+      console.log(teste);
+      console.log();
+    };
   }
 
 }
