@@ -50,7 +50,13 @@
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="./assets/js/chart.min.js"></script>
-
+    <script>
+      document.querySelector('.custom-file-input').addEventListener('change', function (e) {
+        var name = document.getElementById("customFileInput").files[0].name;
+        var nextSibling = e.target.nextElementSibling
+        nextSibling.innerText = name
+      })
+    </script>
 
 
 

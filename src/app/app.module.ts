@@ -41,12 +41,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { ApplypageComponent } from './apply/applypage/applypage.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { ArticlesmultipleComponent } from './components/articlelist/articlesmultiple/articlesmultiple.component';
 import { DatePipe } from '@angular/common';
-import { ArticlesPipe } from './pipes/articles.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
-import {CKEditorModule} from '@ckeditor/ckeditor5-angular'
+import { CKEditorModule } from 'ng2-ckeditor';
+import { FormsModule } from '@angular/forms';
+import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -82,7 +82,6 @@ import {CKEditorModule} from '@ckeditor/ckeditor5-angular'
     ModalComponent,
     ApplypageComponent,
     ArticlesmultipleComponent,
-    ArticlesPipe,
   ],
   imports: [
     BrowserModule,
@@ -94,11 +93,12 @@ import {CKEditorModule} from '@ckeditor/ckeditor5-angular'
     MatButtonModule,
     HttpClientModule,
     FormsModule, NgxPaginationModule,
-    CKEditorModule
+    CKEditorModule, EditorModule
   ],
   providers: [
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
-    DatePipe
+    DatePipe,
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
   ],
   bootstrap: [AppComponent],
   entryComponents: [ModalComponent, ContentlistComponent],

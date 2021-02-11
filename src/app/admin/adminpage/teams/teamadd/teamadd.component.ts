@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-teamadd',
@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../adminpage.component.css'],
 })
 export class TeamaddComponent implements OnInit {
-  constructor() {}
+  constructor(private renderer:Renderer2) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+
+  }
+
 }

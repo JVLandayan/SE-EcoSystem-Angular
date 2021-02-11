@@ -26,13 +26,14 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/admin/assets"
+              "src/app/admin/assets",
+              { "glob": "**/*", "input": "node_modules/tinymce", "output": "/tinymce/" }
             ],
             "styles": [
               "src/styles.css"
 
             ],
-            "scripts": ["src/assets/js/script.js", "src/assets/js/jquery.min.js"]
+            "scripts": ["src/assets/js/script.js", "src/assets/js/jquery.min.js", "node_modules/tinymce/tinymce.min.js"]
 
           },
           "configurations": {
