@@ -10,7 +10,4 @@ export class ApplyComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  applyPage() {
-    window.location.href = './applytemplate/apply.html';
-  }
 }

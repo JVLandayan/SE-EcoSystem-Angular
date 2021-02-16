@@ -1,7 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { articlelist } from 'src/app/models/articleslist.model';
-import { ArticlesService } from 'src/app/service/articles.service';
+import { ArticlesService } from 'src/app/services/articles.service';
 
 
 @Component({

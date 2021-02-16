@@ -47,6 +47,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { FormsModule } from '@angular/forms';
 import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
+import { AuthGuard } from './guards/auth.guard';
+import { AuthService } from './services/auth.service';
+import { AuthChildGuard } from './guards/auth-child.guard';
+import { MerchandiseComponent } from './components/merchandise/merchandise.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +86,7 @@ import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
     ModalComponent,
     ApplypageComponent,
     ArticlesmultipleComponent,
+    MerchandiseComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,12 +98,13 @@ import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
     MatButtonModule,
     HttpClientModule,
     FormsModule, NgxPaginationModule,
-    CKEditorModule, EditorModule
+    CKEditorModule, EditorModule, FormsModule
   ],
   providers: [
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
     DatePipe,
-    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }, AuthGuard, AuthService,
+    AuthChildGuard
   ],
   bootstrap: [AppComponent],
   entryComponents: [ModalComponent, ContentlistComponent],

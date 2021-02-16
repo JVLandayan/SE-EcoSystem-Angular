@@ -1,6 +1,8 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Subject } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'src/app/models/useraccount.model';
+import { AuthService } from 'src/app/services/auth.service';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-adminpage',
@@ -8,15 +10,29 @@ import { Subject } from 'rxjs';
   styleUrls: ['./adminpage.component.css'],
 })
 export class AdminpageComponent implements OnInit {
-  constructor(public router: Router, private route: ActivatedRoute) {}
-  activatedComponent = new Subject<any>();
-  activepage = '';
-
-  ngOnInit(): void {}
-
-  active = false;
-
-  routeState() {
-    this.activatedComponent.next();
+  constructor(public router: Router, private authService: AuthService) {
   }
+
+  activeUser!: User
+
+  ngOnInit(): void {
+    console.log(this.activeUser)
+  }
+
+  activatedUser() {
+
+  }
+
+  onLogout() {
+    this.authService.logout()
+  }
+
+
+
+
+
+
+
+
+
 }

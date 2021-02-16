@@ -30,10 +30,16 @@
               { "glob": "**/*", "input": "node_modules/tinymce", "output": "/tinymce/" }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+               "./node_modules/alertifyjs/build/css/alertify.min.css",
+                "./node_modules/alertifyjs/build/css/themes/bootstrap.min.css"
 
             ],
-            "scripts": ["src/assets/js/script.js", "src/assets/js/jquery.min.js", "node_modules/tinymce/tinymce.min.js"]
+            "scripts": [
+              "src/assets/js/script.js",
+              "src/assets/js/jquery.min.js",
+              "node_modules/tinymce/tinymce.min.js",
+              "./node_modules/alertifyjs/build/alertify.min.js"]
 
           },
           "configurations": {

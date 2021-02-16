@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Renderer2 } from '@angular/core';
 
@@ -7,7 +8,7 @@ import { Renderer2 } from '@angular/core';
   styleUrls: ['./applypage.component.scss'],
 })
 export class ApplypageComponent implements OnInit {
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, public datePipe: DatePipe) {}
 
   addJsToElement(src: string): HTMLScriptElement {
     const script = document.createElement('script');
@@ -25,4 +26,16 @@ export class ApplypageComponent implements OnInit {
       console.log();
     };
   }
+
+  latestDate: any
+
+  getDate() {
+    this.latestDate = new Date();
+    const latest_date = this.datePipe.transform(this.latestDate, 'dd-mm-yy')
+    return latest_date
+  }
+
+
+
+
 }

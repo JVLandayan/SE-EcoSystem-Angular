@@ -107,7 +107,8 @@ export class ArticlesService {
   }]
 
   get blogContent() {
-    return [...this._blogContent]
+    console.log(this._blogContent)
+    return this._blogContent
   }
 
 

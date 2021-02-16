@@ -1,42 +1,42 @@
 <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo"><a routerLink="accounts" class="simple-text logo-normal">
-          Ecosystem | Admin
+          Ecosystem | {{this.activeUser.authId == 2 ? 'Author': 'Admin'}}
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="accounts" routerLinkActive>
+          <li class="nav-item" >
+            <a class="nav-link" *ngIf="this.activeUser.authId == 2 ? false : true" routerLink="accounts" routerLinkActive>
               <i class="material-icons">dashboard</i>
               <p>Accounts</p>
             </a>
           </li>
-          <li class="nav-item" >
-            <a class="nav-link" (click)="routeState()" routerLink="content">
+          <li class="nav-item"  >
+            <a class="nav-link"   routerLink="content">
               <i class="material-icons">local_post_office</i>
               <p>Contents</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" (click)="routeState()" routerLink="teams">
+          <li class="nav-item " >
+            <a class="nav-link" *ngIf="this.activeUser.authId == 2 ? false : true" routerLink="teams">
               <i class="material-icons">group</i>
               <p>Teams</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" (click)="routeState()" routerLink="newsletter">
+          <li class="nav-item " >
+            <a class="nav-link" *ngIf="this.activeUser.authId == 2 ? false : true" routerLink="newsletter">
               <i class="material-icons">library_books</i>
               <p>Newsletter</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" (click)="routeState()" routerLink="settings">
+          <li class="nav-item " >
+            <a class="nav-link" routerLink="settings">
               <i class="material-icons">settings</i>
               <p>Settings</p>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="routeState()" href="./map.html">
+            <a class="nav-link" routerLink="login">
               <i class="material-icons">subdirectory_arrow_right</i>
               <p>Logout</p>
             </a>
