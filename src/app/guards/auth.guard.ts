@@ -11,10 +11,6 @@ export class AuthGuard implements CanActivate {
 
   }
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree  {
-    if(this.authService.isAuthenticated() !== true) {
-    window.alert('Invalid Credentials')
-    this.router.navigate(['login'])
-  }
     return true;
   }
 

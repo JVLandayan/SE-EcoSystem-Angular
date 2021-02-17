@@ -51,6 +51,10 @@ import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { AuthChildGuard } from './guards/auth-child.guard';
 import { MerchandiseComponent } from './components/merchandise/merchandise.component';
+import { MerchAdminComponent } from './admin/adminpage/merch-admin/merch-admin.component';
+import { MerchAdminListComponent } from './admin/adminpage/merch-admin/merch-admin-list/merch-admin-list.component';
+import { MerchAdminAddComponent } from './admin/adminpage/merch-admin/merch-admin-add/merch-admin-add.component';
+import { MerchAdminUpdateComponent } from './admin/adminpage/merch-admin/merch-admin-update/merch-admin-update.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +91,10 @@ import { MerchandiseComponent } from './components/merchandise/merchandise.compo
     ApplypageComponent,
     ArticlesmultipleComponent,
     MerchandiseComponent,
+    MerchAdminComponent,
+    MerchAdminListComponent,
+    MerchAdminAddComponent,
+    MerchAdminUpdateComponent,
   ],
   imports: [
     BrowserModule,

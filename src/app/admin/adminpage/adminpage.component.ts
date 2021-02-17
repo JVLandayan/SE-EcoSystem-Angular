@@ -16,12 +16,11 @@ export class AdminpageComponent implements OnInit {
   activeUser!: User
 
   ngOnInit(): void {
+    this.activeUser = this.authService.Userdata
     console.log(this.activeUser)
   }
 
-  activatedUser() {
 
-  }
 
   onLogout() {
     this.authService.logout()

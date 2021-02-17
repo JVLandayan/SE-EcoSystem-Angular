@@ -9,6 +9,9 @@ import { ContentComponent } from './admin/adminpage/content/content.component';
 import { ContentaddComponent } from './admin/adminpage/content/contentadd/contentadd.component';
 import { ContenteditComponent } from './admin/adminpage/content/contentedit/contentedit.component';
 import { ContentlistComponent } from './admin/adminpage/content/contentlist/contentlist.component';
+import { MerchAdminAddComponent } from './admin/adminpage/merch-admin/merch-admin-add/merch-admin-add.component';
+import { MerchAdminListComponent } from './admin/adminpage/merch-admin/merch-admin-list/merch-admin-list.component';
+import { MerchAdminUpdateComponent } from './admin/adminpage/merch-admin/merch-admin-update/merch-admin-update.component';
 import { NewsletterComponent } from './admin/adminpage/newsletter/newsletter.component';
 import { SettingsComponent } from './admin/adminpage/settings/settings.component';
 import { TeamaddComponent } from './admin/adminpage/teams/teamadd/teamadd.component';
@@ -76,6 +79,24 @@ const routes: Routes = [
           {
             path: 'add',
             component: ContentaddComponent,
+          },
+        ],
+      },
+      {
+        path: 'merchandise',
+        component: ContentComponent,
+        children: [
+          {
+            path: '',
+            component: MerchAdminListComponent,
+          },
+          {
+            path: 'add',
+            component: MerchAdminAddComponent,
+          },
+          {
+            path: 'update',
+            component: MerchAdminUpdateComponent,
           },
         ],
       },

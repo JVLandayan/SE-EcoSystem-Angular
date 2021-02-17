@@ -29,10 +29,10 @@ export class UsersService {
     authId : 2,
     first_name: 'Billy',
     last_name: 'Eillish',
-    email: 'billyeillish@gmail.com',
+    email: 'billyeillishes@gmail.com',
     password: 'billypassword',
     forgot_password_id: '',
-    media_id: 0
+    media_id: 2
   }]
 
   get User () {

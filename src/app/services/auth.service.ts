@@ -24,34 +24,30 @@ export class AuthService {
 
   }
 
-  userData!: User
+  _userinfo : any
 
   //*
   activatedUser(details:User) {
-    this.userData = details
-    console.log(this.userData)
+    this._userinfo = details
+    console.log(this._userinfo)
   }
 
   //*
 
   loggedIn = false
 
-  isAuthenticated()   {
-    if (this.userData!==null || this.userData!==undefined)
-    return true
-    else
-    return false
-  }
 
   isAuthorized(email:string,password:string) {
     const currentUser = this.userService.User.find((data:User)=>{
-
+      return data.email == email
     })
+    this._userinfo = currentUser
     console.log(currentUser)
-    console.log(this.userService.User)
-    console.log(email)
-
     this.login()
+  }
+
+  get Userdata() {
+    return this._userinfo
   }
 
 

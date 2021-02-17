@@ -5,8 +5,8 @@
                 <div class="m-auto w-lg-75 w-xl-50">
                     <h2 class="text-warning font-weight-light mb-5"><i class="fa fa-diamond"></i>&nbsp;Ecotigers</h2>
                     <form >
-                        <div class="form-group"><label class="text-secondary">Email</label><input [(ngModel)]="inputEmail" class="form-control" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
-                        <div class="form-group"><label class="text-secondary">Password</label><input [(ngModel)]="inputEmail" class="form-control" type="password" ></div><button class="btn btn-info mt-2 bg-warning" (click)="onLogin()" type="submit">Log In</button></form>
+                        <div class="form-group"><label class="text-secondary">Email</label><input [(ngModel)]="inputEmail" name="username" class="form-control" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
+                        <div class="form-group"><label class="text-secondary">Password</label><input [(ngModel)]="inputPassword" name="password" class="form-control" type="password" ></div><button class="btn btn-info mt-2 bg-warning" (click)="onLogin()" type="submit">Log In</button></form>
                     <p class="mt-3 mb-0"><a class="text-warning small" (click)="switchpage()">Forgot your password?</a></p>
                 </div>
             </div>

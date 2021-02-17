@@ -15,7 +15,6 @@ export class ArticlepageComponent implements OnInit {
   activeArticle: any
 
   ngOnInit(): void {
-    console.log(this.articleService.blogContent)
     const article = this.articleService.blogContent.find((data:articlelist)=>{
     return data.id == +this.route.snapshot.params['id']
     })

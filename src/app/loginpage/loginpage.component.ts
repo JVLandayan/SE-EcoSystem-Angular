@@ -10,8 +10,8 @@ export class LoginpageComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
 
-  inputEmail:string = ''
-  inputPassword:string = ''
+  inputEmail!:string
+  inputPassword!:string
   ngOnInit(): void {}
   tanginamo = 0
 
